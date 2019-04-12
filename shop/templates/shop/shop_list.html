@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Shop List</h1>
+
+            <table class="table table-bordered table-hover">
+            {% for item in shop_list %}
+                <tr>
+                    <td>
+                        {{ item.name }}
+                    </td>
+                    <td>{{ item.desc }}</td>
+                    <td>{{ item.address }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+
+            <a href="#" class="btn btn-primary">New Shop</a>
+        </div>
+    </div>
+</div>
