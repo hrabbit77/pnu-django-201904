@@ -9,7 +9,9 @@
             {% for item in shop_list %}
                 <tr>
                     <td>
-                        {{ item.name }}
+                        <a href="/shop/shop/{{ item.pk }}/" >
+                            {{ item.name }}
+                        </a>
                     </td>
                     <td>{{ item.desc }}</td>
                     <td>{{ item.address }}</td>
