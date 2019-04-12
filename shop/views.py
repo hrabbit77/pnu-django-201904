@@ -29,3 +29,9 @@ def shop_list(request):
     return render(request, 'shop/shop_list.html', {
         'shop_list': qs,
     })
+
+def shop_detail(request, pk):
+    item = Shop.objects.get(pk=pk)  # 즉시 DB로부터 Fetch
+    return render(request, 'shop/shop_detail.html', {
+        'item': item,
+    })
